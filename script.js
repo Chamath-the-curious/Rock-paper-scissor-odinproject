@@ -75,3 +75,6 @@ function declareWinner(scoreBoard) {
         console.log("You lost!");
     }
 }
+
+let scoreBoard = playGame();
+declareWinner(scoreBoard);
