@@ -6,4 +6,9 @@ function getComputerChoice() {
     return elements[randomElement];
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice = prompt("Pick an element: ");
+    return humanChoice;
+}
+
+console.log(getHumanChoice());
