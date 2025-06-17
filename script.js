@@ -66,3 +66,12 @@ function playGame() {
     return [humanScore, computerScore];
 }
 
+function declareWinner(scoreBoard) {
+    if (scoreBoard[0] == scoreBoard[1]) {
+        console.log("It's a draw!")
+    } else if (scoreBoard[0] > scoreBoard[1]) {
+        console.log("Congratulations! You win.");
+    } else if (scoreBoard[0] < scoreBoard[1]) {
+        console.log("You lost!");
+    }
+}
