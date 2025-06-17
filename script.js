@@ -23,15 +23,18 @@ function playGame() {
 
         if (humanChoice == computerChoice) {
             console.log("Try again!");
+            console.log(`You ${humanScore} - ${computerScore} Computer`)          
         } 
 
         if (humanChoice == "rock") {
             if (computerChoice == "paper") {
                 console.log("You lose! Paper beats Rock.");
                 computerScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             } else if (computerChoice == "scissor") {
                 console.log("You win! Rock beats scissor.");
                 humanScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             }
         }
 
@@ -39,9 +42,11 @@ function playGame() {
             if (computerChoice == "rock") {
                 console.log("You win! Paper beats Rock.");
                 humanScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             } else if (computerChoice == "scissor") {
                 console.log("You lose! Scissor beats Paper.");
                 computerScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             }
         }
 
@@ -49,9 +54,11 @@ function playGame() {
             if (computerChoice == "rock") {
                 console.log("You lose! Rock beats Scissor.");
                 computerScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             } else if (computerChoice == "paper") {
                 console.log("You win! Scissor beats Paper.");
                 humanScore += 1;
+                console.log(`You ${humanScore} - ${computerScore} Computer`)
             }
         }
     }
@@ -68,11 +75,11 @@ function playGame() {
 
 function declareWinner(scoreBoard) {
     if (scoreBoard[0] == scoreBoard[1]) {
-        console.log("It's a draw!")
+        console.log("It's a draw! :3")
     } else if (scoreBoard[0] > scoreBoard[1]) {
-        console.log("Congratulations! You win.");
+        console.log("Congratulations! You win B)");
     } else if (scoreBoard[0] < scoreBoard[1]) {
-        console.log("You lost!");
+        console.log("You lost! :(");
     }
 }
 
