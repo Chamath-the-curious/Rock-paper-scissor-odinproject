@@ -13,3 +13,42 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice == computerChoice) {
+        console.log("Try again!");
+        return;
+    } 
+
+    if (humanChoice == "rock") {
+        if (computerChoice == "paper") {
+            console.log("You lose! Paper beats Rock.");
+            computerScore += 1;
+        } else if (computerChoice == "scissor") {
+            console.log("You win! Rock beats scissor.");
+            humanScore += 1;
+        }
+    }
+
+    if (humanChoice == "paper") {
+        if (computerChoice == "rock") {
+            console.log("You win! Paper beats Rock.");
+            humanScore += 1;
+        } else if (computerChoice == "scissor") {
+            console.log("You lose! Scissor beats Paper.");
+            computerScore += 1;
+        }
+    }
+
+    if (humanChoice == "scissor") {
+        if (computerChoice == "rock") {
+            console.log("You lose! Rock beats Scissor.");
+            computerScore += 1;
+        } else if (computerChoice == "paper") {
+            console.log("You win! Scissor beats Paper.");
+            humanScore += 1;
+        }
+    }
+}
