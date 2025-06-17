@@ -16,11 +16,13 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
-        humanChoice = humanChoice.toLowerCase();
+
+        if (!typeof(humanChoice) == undefined) {
+            humanChoice = humanChoice.toLowerCase();
+        }
 
         if (humanChoice == computerChoice) {
             console.log("Try again!");
-            return;
         } 
 
         if (humanChoice == "rock") {
@@ -53,4 +55,14 @@ function playGame() {
             }
         }
     }
+
+    let numberOfRounds = 0;
+
+    while (numberOfRounds < 5) {
+        playRound(getHumanChoice(), getComputerChoice());
+        numberOfRounds += 1
+    }
+
+    return [humanScore, computerScore];
 }
+
